@@ -8,6 +8,12 @@ async function run(): Promise<void> {
   try {
     
     const subKey = process.env.AZURE_COGNITIVE_SUBSCRIPTION_KEY
+    const url = process.env.AZURE_COGNITIVE_ENDPOINT
+    if (!subKey)
+      throw new Error('No Azure Cognitive Service subscription key defined');
+
+    if (!url)
+      throw new Error('No Azure Cognitive Service endpoint defined');
     /*
     const subKey = core.getInput("azure-cognitive-subscription-key", { required: true })
     const url = core.getInput("azure-cognitive-endpoint", { required: true })
@@ -68,9 +74,12 @@ async function run(): Promise<void> {
       textToCheck = context.payload.comment.body;
       issueNumber = context.issue.number;
     }
+    */
 
+    const textToCheck = "1999.01.01"
     const response = await pii.callPiiDetectionEndpoint(textToCheck, url, subKey)
 
+    /*
     if (response) {
       console.log("\n\n------------------------------------------------------");
       response.documents.forEach(doc => {
