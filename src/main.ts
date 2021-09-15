@@ -7,6 +7,7 @@ import * as path  from 'path';
 async function run(): Promise<void> {
   try {
     
+    /*
     const subKey = core.getInput("azure-cognitive-subscription-key", { required: true })
     const url = core.getInput("azure-cognitive-endpoint", { required: true })
     const categories = core.getInput("categories", { required: true }).toLowerCase().split("|")
@@ -24,9 +25,11 @@ async function run(): Promise<void> {
 
     if (!url)
       throw new Error('No Azure Cognitive Service endpoint defined');
+      */
 
     //joining path of directory
-    const directoryPath = path.join(__dirname, './');
+    //const directoryPath = path.join(__dirname, './');
+    const directoryPath = path.join('./', './');
     //passsing directoryPath and callback function
     fs.readdir(directoryPath, function (err, files) {
       //handling error
@@ -40,6 +43,7 @@ async function run(): Promise<void> {
       });
     });
 
+    /*
     //const client = github.getOctokit(gitHubToken);
     let textToCheck;
     let containsPii = false;
@@ -97,6 +101,7 @@ async function run(): Promise<void> {
       }
       console.log("------------------------------------------------------\n\n");
     }
+  */
   } catch (error) {
     if (error instanceof Error) {
       console.log(error);
