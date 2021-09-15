@@ -3,6 +3,8 @@ import * as core from "@actions/core";
 import * as github from '@actions/github';
 import * as fs from 'fs';
 import * as path  from 'path';
+import * as dotenv from "dotenv";
+dotenv.config({ path: './.env' });
 
 async function run(): Promise<void> {
   try {
