@@ -31,6 +31,7 @@ async function run(): Promise<void> {
     //const directoryPath = path.join(__dirname, './');
     const directoryPath = path.join('./', './');
     //passsing directoryPath and callback function
+    console.log("pii-detection start...")
     fs.readdir(directoryPath, function (err, files) {
       //handling error
       if (err) {

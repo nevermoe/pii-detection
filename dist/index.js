@@ -191,23 +191,30 @@ const path = __importStar(__webpack_require__(622));
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            //const subKey = core.getInput("azure-cognitive-subscription-key", { required: true })
-            //const url = core.getInput("azure-cognitive-endpoint", { required: true })
-            //const categories = core.getInput("categories", { required: true }).toLowerCase().split("|")
-            //const labelText = core.getInput("label-text", { required: false })
-            ////const gitHubToken = core.getInput("github-token", { required: true })
-            //const context = github.context;
-            //console.log(context.payload);
-            //if (!categories || categories.length == 0)
-            //  throw new Error('No categories defined');
-            //if (!subKey)
-            //  throw new Error('No Azure Cognitive Service subscription key defined');
-            //if (!url)
-            //  throw new Error('No Azure Cognitive Service endpoint defined');
+            /*
+            const subKey = core.getInput("azure-cognitive-subscription-key", { required: true })
+            const url = core.getInput("azure-cognitive-endpoint", { required: true })
+            const categories = core.getInput("categories", { required: true }).toLowerCase().split("|")
+            const labelText = core.getInput("label-text", { required: false })
+            //const gitHubToken = core.getInput("github-token", { required: true })
+            const context = github.context;
+        
+            console.log(context.payload);
+        
+            if (!categories || categories.length == 0)
+              throw new Error('No categories defined');
+        
+            if (!subKey)
+              throw new Error('No Azure Cognitive Service subscription key defined');
+        
+            if (!url)
+              throw new Error('No Azure Cognitive Service endpoint defined');
+              */
             //joining path of directory
             //const directoryPath = path.join(__dirname, './');
             const directoryPath = path.join('./', './');
             //passsing directoryPath and callback function
+            console.log("pii-detection start...");
             fs.readdir(directoryPath, function (err, files) {
                 //handling error
                 if (err) {
