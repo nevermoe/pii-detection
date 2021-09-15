@@ -7,8 +7,8 @@ import * as path  from 'path';
 async function run(): Promise<void> {
   try {
     
-    /*
     const subKey = core.getInput("azure-cognitive-subscription-key", { required: true })
+    /*
     const url = core.getInput("azure-cognitive-endpoint", { required: true })
     const categories = core.getInput("categories", { required: true }).toLowerCase().split("|")
     const labelText = core.getInput("label-text", { required: false })
