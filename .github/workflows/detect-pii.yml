@@ -1,5 +1,6 @@
 name: 'pii-detection'
 on:
+  push:
   issues:
     types:
       - opened
